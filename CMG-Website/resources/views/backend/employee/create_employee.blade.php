@@ -35,14 +35,14 @@
                 <h2 class="font-thai">เพิ่มตำแหน่งงานใหม่</h2>
             </div>
             <div>
-                <a href="{{ route('backend.supply.index') }}" class="btn btn-primary"><span class="font-thai">ย้อนกลับ</span></a>
+                <a href="{{ route('backend.employee.index') }}" class="btn btn-primary"><span class="font-thai">ย้อนกลับ</span></a>
             </div>
             @if (session('status'))
                 <div class="alert alert-success">
                     {{ session('status')}}
                 </div>
             @endif
-            <form action="{{ route('backend.supply.store') }}" method="post">
+            <form action="{{ route('backend.employee.store') }}" method="post">
                 @csrf
                 <div class="row">
                     <div class="col-md-12">

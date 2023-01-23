@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Manrope&family=Mitr:wght@300&family=Rubik&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Backend - Edit SubCategory</title>
+    <title>Backend - Edit Employee</title>
     @vite(['resources/js/app.js'])
     <style>
         .font-thai{
@@ -35,14 +35,14 @@
                 <h2 class="font-thai">แก้ไขตำแหน่งงาน</h2>
             </div>
             <div>
-                <a href="{{ route('backend.subcategory.index') }}" class="btn btn-primary"><span class="font-thai">ย้อนกลับ</span></a>
+                <a href="{{ route('backend.employee.index') }}" class="btn btn-primary"><span class="font-thai">ย้อนกลับ</span></a>
             </div>
             @if (session('status'))
                 <div class="alert alert-success">
                     {{ session('status')}}
                 </div>
             @endif
-            <form action="{{ route('backend.subcategory.update', $scate->sc_id) }}" method="POST">
+            <form action="{{ route('backend.employee.update', $emp->id) }}" method="POST">
                 @csrf
                 @method('PUT')
                 <div class="row">
@@ -50,7 +50,7 @@
                         <div class="form-group">
                             <label for="ename" class="font-thai">ชื่อตำแหน่งงาน</label>
                             <br>
-                            <input type="text" name="ename" id="ename" value="{{ $scate->name }}">
+                            <input type="text" name="ename" id="ename" value="{{ $emp->name }}">
                             @error('ename')
                             <div class="alert alert-danger">
                             <span class="font-thai">กรุณากรอกชื่อตำแหน่งงานก่อน!</span>
@@ -62,7 +62,7 @@
                         <div class="form-group">
                             <label for="etotal" class="font-thai">จำนวน</label></label>
                             <br>
-                            <input type="number" name="etotal" id="etotal" value="{{ $scate->name }}">
+                            <input type="number" name="etotal" id="etotal" value="{{ $emp->total }}">
                             @error('etotal')
                             <div class="alert alert-danger">
                             <span class="font-thai">กรุณากรอกชื่อจำนวนก่อน!</span>
