@@ -11,10 +11,12 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Manrope&family=Rubik&display=swap" rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v15.0" nonce="o4n9F8ar"></script>
         <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
           @vite(['resources/js/app.js'])
 </head>
@@ -81,7 +83,7 @@
                     Civil work, Steel structure work. By team of qualified and experienced personnel in the field of construction in industrial area.
                     We also design and control construction to have standard, We have a team of professional designers designed with 3D programs.
                     To provide customers with visualization and adaptation to their satisfaction.</p>
-                {{-- <ul> --}}
+              <!-- <ul> -->
                 <div class="row gx-1">
                   <div class="col-9">
                     <li id="pointer1" class="fade-in-left">
@@ -113,7 +115,7 @@
                     </li>
                   </div>
                   <div class="col-3">
-                    <img class="img-fluid img-view cv-anim" src="../storage/Works/LINE_ALBUM_10112022_230104.jpg">
+                    <img class="img-fluid img-view cv-anim" data-aos="zoom-in-up" src="../storage/Works/LINE_ALBUM_10112022_230104.jpg">
                   </div>
                 </div>
                 <div class="row gx-1">
@@ -136,10 +138,12 @@
                     </li>
                   </div>
                   <div class="col-5">
-                    <img class="img-fluid img-view cv-anim" src="../storage/Works/LINE_ALBUM_19122022_230104_0.jpg">
+                    <div data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500">
+                      <img class="img-fluid img-view cv-anim" data-aos="zoom-in-down" src="../storage/Works/LINE_ALBUM_19122022_230104_0.jpg">
+                    </div>
                   </div>
                 </div>
-                {{-- </ul> --}}
+                <!-- </ul> -->
             </div>
               </div>
           </div>

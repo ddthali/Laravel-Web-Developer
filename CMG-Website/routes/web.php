@@ -8,7 +8,9 @@ use App\Http\Controllers\BackN;
 use App\Http\Controllers\Gallery;
 use App\Http\Controllers\category_controller;
 use App\Http\Controllers\subcate_controller;
+use App\Http\Controllers\vendor_controller;
 
+Route::middleware(['auth'])->group(function () {
 Route::resources([
     'backend/carousel' => BackN::class,
     'backend/gallery' => Gallery::class,
@@ -17,7 +19,12 @@ Route::resources([
     'backend/manhours' => mh_controller::class,
     'backend/supply' => supply_controller::class,
     'backend/employee' => EmployEE_controller::class,
+    'backend/vendor' => vendor_controller::class,
 ],['as'=>'backend']);
+
+Route::get('backend', fn()=>view('backend.index'))->name('backend.index');
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+});
 // Route::get('/backend/carousel', '\App\Http\Controllers\BackN@index')->name('backend.carousel.index');
 // Route::get('/backend/carousel/create', '\App\Http\Controllers\BackN@create')->name('backend.carousel.create');
 Route::post('/update-order', [BackN::class, 'updateOrder']);

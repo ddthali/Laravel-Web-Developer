@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 class mh_controller extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $mhrs = mh_record::all();

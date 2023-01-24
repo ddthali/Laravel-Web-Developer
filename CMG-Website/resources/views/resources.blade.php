@@ -60,7 +60,6 @@
                 <div class="col-lg-4 ">
                     <div id="VenderBN" class="VisionBN container rounded-3 mt-4 mb-3 mx-0 mx-auto" style="padding: 2.43rem;">
                         <h4 style="font-weight: 800" class="text-center">VENDOR-LIST</h4>
-                        <hr width="100%" color="blue" size="10px">
                         <h5 style="font-weight: 700" class="text-center">Material</h5>
                         <h6 style="font-weight: 600;font-family: 'Mitr',sans-serif;">งานวัสดุก่อสร้าง – เหล็ก</h6>
                         <ul style="list-style-type: '\1F3ED&nbsp&nbsp';">
@@ -126,7 +125,6 @@
                             @endforeach
                             </div>
                         </ul>
-                        <hr width="100%" color="blue" size="10px">
                         <h5 style="font-weight: 700" class="text-center mt-4">Service & Rentals</h5>
                         <h6 style="font-weight: 600;font-family: 'Mitr',sans-serif;">งานบริการออกแบบสถาปัตย์</h6>
                         <ul style="list-style-type: '\1F3ED&nbsp&nbsp';">
@@ -183,7 +181,6 @@
                     <div id="aboutcmg"
                         class="Content-dark container  p-4 mt-4 mb-5 rounded-3"
                         >
-                                <!-- <hr width="100%" color="blue" size="10px"> -->
                                 <div class="ribbwork1" align="center">
                                     <div class="ribbwork2">
                                     CMG's Head Office
@@ -218,7 +215,6 @@
                                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248987.4523396138!2d101.1055459018639!3d12.815535309877644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3102fa6dcec5b94f%3A0xdd02f5c62a24168a!2sCMG&#39;s%20Work%20Shop!5e0!3m2!1sen!2sth!4v1671786891362!5m2!1sen!2sth"
                                             width="600" height="450" style="border:0;" allowfullscreen=""
                                             loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                        <hr width="100%" color="blue" size="10px">
                                         <div class="text-start mb-5">
                                             <table class="table table-borderless custom-hover">
                                                 <tbody>

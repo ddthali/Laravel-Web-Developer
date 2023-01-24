@@ -79,6 +79,11 @@ function dsnone(){
       }, delay2);
       delay2 += 500; // Increase the delay by 500ms for each list item
     });
+    if(AOS.init()){
+        console.log("Has AOS");
+    }else{
+        console.log("Hasn't AOS");
+    }
   }
   imgview = document.querySelectorAll(".img-view")
   if(imgview != undefined){

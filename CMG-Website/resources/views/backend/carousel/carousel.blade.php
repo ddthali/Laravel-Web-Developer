@@ -106,6 +106,7 @@ const FixedData = [];
             </table>
             {{ $carousel->links('pagination::bootstrap-5') }}
         </div>
+        <a role="button" class="btn btn-danger" href="{{ url('/logout') }}">Logout</a>
     </div>
 <script>
     function deleteRecord(id) {

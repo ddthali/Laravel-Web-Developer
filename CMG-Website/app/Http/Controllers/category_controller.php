@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 class category_controller extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $categor = category::all();

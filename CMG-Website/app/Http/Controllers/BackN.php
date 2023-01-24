@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\Storage;
 
 class BackN extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     //Create
     public function index()
     {

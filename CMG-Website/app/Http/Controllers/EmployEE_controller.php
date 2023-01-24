@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 class EmployEE_controller extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $emp = EmployEE::all();

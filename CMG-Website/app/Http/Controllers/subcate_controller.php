@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 class subcate_controller extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $subc = subcate::all();
