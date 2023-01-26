@@ -72,7 +72,7 @@
                   </div>
                 </div>
 
-                <div class="row gx-0">
+                <div class="row g-1">
                   <div class="col-md-6">
                     <img class="img-fluid img-view cv-anim" src="../storage/documentation/doc-certi-1.jpg">
                   </div>
@@ -102,7 +102,7 @@
                   </div>
                 </div>
 
-                <div id="Iframe-Master-CC-and-Rs" class="set-margin set-padding set-border set-box-shadow center-block-horiz">
+                <div class="pdf-iframe set-margin set-padding set-border set-box-shadow center-block-horiz">
                   <div class="responsive-wrapper
                      responsive-wrapper-wxh-572x612"
                      style="-webkit-overflow-scrolling: touch; overflow: auto;">
@@ -122,7 +122,7 @@
                 </div>
 
 
-                <div class="row gx-0">
+                <div class="row g-1">
                   <div class="col-md-6">
                     <img class="img-fluid img-view cv-anim" src="../storage/documentation/cer-1.png">
                   </div>
@@ -143,65 +143,5 @@
     @endcomponent
 <script src="{{ asset('/js/normal.js') }}"></script>
 </body>
-<style>
-  /* CSS for responsive iframe */
-/* ========================= */
-
-/* outer wrapper: set max-width & max-height; max-height greater than padding-bottom % will be ineffective and height will = padding-bottom % of max-width */
-#Iframe-Master-CC-and-Rs {
-  max-width: 512px;
-  max-height: 100%;
-  overflow: hidden;
-}
-
-/* inner wrapper: make responsive */
-.responsive-wrapper {
-  position: relative;
-  height: 0;    /* gets height from padding-bottom */
-
-  /* put following styles (necessary for overflow and scrolling handling on mobile devices) inline in .responsive-wrapper around iframe because not stable in CSS:
-    -webkit-overflow-scrolling: touch; overflow: auto; */
-
-}
-
-.responsive-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-
-/* padding-bottom = h/w as % -- sets aspect ratio */
-/* YouTube video aspect ratio */
-.responsive-wrapper-wxh-572x612 {
-  padding-bottom: 107%;
-}
-
-/* general styles */
-/* ============== */
-.set-border {
-  border: 5px inset #4f4f4f;
-}
-.set-box-shadow {
-  -webkit-box-shadow: 4px 4px 14px #4f4f4f;
-  -moz-box-shadow: 4px 4px 14px #4f4f4f;
-  box-shadow: 4px 4px 14px #4f4f4f;
-}
-.set-padding {
-  padding: 40px;
-}
-.set-margin {
-  margin: 30px;
-}
-.center-block-horiz {
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-</style>
 </html>
 

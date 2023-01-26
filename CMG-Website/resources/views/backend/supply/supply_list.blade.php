@@ -31,6 +31,8 @@
             font-family: 'Mitr',sans-serif!important;
         }
 </style>
+@component('components.sidenav_backend')
+@endcomponent
 </head>
 <script>
     const Success = Swal.mixin({

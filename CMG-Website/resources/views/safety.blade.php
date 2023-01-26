@@ -149,22 +149,13 @@
                 </div>
               </div>
 
-              <div class="row gx-0">
+              <div class="row g-1">
+                {{-- img_cate คือ id ใน ตาราง img_category ส่วน sub_cate คือ sub_cate ใน ตาราง s_category --}}
+                @foreach($s_img->where('img_cate','3')->where('sub_cate', '8') as $imgs)
                 <div class="col-md-6">
-                  <img class="img-fluid img-view cv-anim" src="../storage/Safety-Image/safety-certi-1.png">
+                  <img class="img-fluid img-view cv-anim" data-src="{{  asset('storage/'.$imgs->path) }}" src="">
                 </div>
-                <div class="col-md-6">
-                  <img class="img-fluid img-view cv-anim" src="../storage/Safety-Image/safety-certi-2.png">
-                </div>
-                <div class="col-md-6">
-                  <img class="img-fluid img-view cv-anim" src="../storage/Safety-Image/safety-certi-3.png">
-                </div>
-                <div class="col-md-6">
-                  <img class="img-fluid img-view cv-anim" src="../storage/Safety-Image/safety-certi-4.png">
-                </div>
-                <div class="col-md-6">
-                  <img class="img-fluid img-view cv-anim" src="../storage/Safety-Image/safety-certi-5.png">
-                </div>
+                @endforeach
               </div>
               <br>
 
@@ -182,13 +173,12 @@
                 </div>
               </div>
 
-              <div class="row gx-0">
-                <div class="col-md-6">
-                  <img class="img-fluid img-view cv-anim" src="../storage/Safety-Image/safety-t-1.jpg">
+              <div class="row g-1">
+                @foreach($s_img->where('img_cate','3')->where('sub_cate', '9') as $imgs)
+                <div class="col-md-4">
+                  <img class="img-fluid img-view cv-anim" data-src="{{  asset('storage/'.$imgs->path) }}" src="">
                 </div>
-                <div class="col-md-6">
-                  <img class="img-fluid img-view cv-anim" src="../storage/Safety-Image/safety-t-2.jpg">
-                </div>
+                @endforeach
               </div>
               <br>
 
@@ -206,16 +196,12 @@
                 </div>
               </div>
 
-              <div class="row gx-0">
+              <div class="row g-1">
+                @foreach($s_img->where('img_cate','3')->where('sub_cate', '10') as $imgs)
                 <div class="col-md-4">
-                  <img class="img-fluid img-view cv-anim" src="../storage/Safety-Image/safety-basic-1.png">
+                  <img class="img-fluid img-view cv-anim" data-src="{{  asset('storage/'.$imgs->path) }}" src="">
                 </div>
-                <div class="col-md-4">
-                  <img class="img-fluid img-view cv-anim" src="../storage/Safety-Image/safety-basic-2.png">
-                </div>
-                <div class="col-md-4">
-                  <img class="img-fluid img-view cv-anim" src="../storage/Safety-Image/safety-basic-3.png">
-                </div>
+                @endforeach
               </div>
               <br>
 
@@ -233,19 +219,12 @@
                 </div>
               </div>
 
-              <div class="row gx-0">
-                <div class="col-md-6">
-                  <img class="img-fluid img-view cv-anim" src="../storage/Safety-Image/safety-fire-1.jpg">
+              <div class="row g-1">
+                @foreach($s_img->where('img_cate','3')->where('sub_cate', '11') as $imgs)
+                <div class="col-md-3">
+                  <img class="img-fluid img-view cv-anim" data-src="{{  asset('storage/'.$imgs->path) }}" src="">
                 </div>
-                <div class="col-md-6">
-                  <img class="img-fluid img-view cv-anim" src="../storage/Safety-Image/safety-fire-2.jpg">
-                </div>
-                <div class="col-md-6">
-                  <img class="img-fluid img-view cv-anim" src="../storage/Safety-Image/safety-fire-3.jpg">
-                </div>
-                <div class="col-md-6">
-                  <img class="img-fluid img-view cv-anim" src="../storage/Safety-Image/safety-fire-4.jpg">
-                </div>
+                @endforeach
               </div>
               <br>
 

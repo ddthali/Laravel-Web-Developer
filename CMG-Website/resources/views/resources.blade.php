@@ -178,9 +178,7 @@
 
                 </div>
                 <div class="col-lg-8">
-                    <div id="aboutcmg"
-                        class="Content-dark container  p-4 mt-4 mb-5 rounded-3"
-                        >
+                    <div id="aboutcmg" class="Content-dark container  p-4 mt-4 mb-5 rounded-3">
                                 <div class="ribbwork1" align="center">
                                     <div class="ribbwork2">
                                     CMG's Head Office
@@ -211,10 +209,18 @@
                                             </div>
                                         </div>
                                         <br>
-                                        <iframe class="mb-5 map-responsive" style="border-radius: 6px;"
+                                        <iframe class="mb-3 map-responsive" style="border-radius: 6px;"
                                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248987.4523396138!2d101.1055459018639!3d12.815535309877644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3102fa6dcec5b94f%3A0xdd02f5c62a24168a!2sCMG&#39;s%20Work%20Shop!5e0!3m2!1sen!2sth!4v1671786891362!5m2!1sen!2sth"
                                             width="600" height="450" style="border:0;" allowfullscreen=""
                                             loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        <div class="Content-light text-center mb-1" style="border-radius: 6px; padding: 12px;">
+                                            <span class="topic-b">Address</span><br>
+                                            &nbsp;M5QG+75 Rayong, Mueang Rayong District, Rayong<br>
+                                            <span class="topic-b">Hours</span><br>
+                                            <span class="topic-b">Monday - Friday :</span>&nbsp;8:00 - 17:00<br>
+                                            <span class="topic-b">Saturday :</span>&nbsp;8:00 - 17:00<br>
+                                            <span class="topic-b">Sunday :</span>&nbsp;Close<br>
+                                        </div>
                                         <div class="text-start mb-5">
                                             <table class="table table-borderless custom-hover">
                                                 <tbody>

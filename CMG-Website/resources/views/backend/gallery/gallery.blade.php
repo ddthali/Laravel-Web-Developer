@@ -50,6 +50,8 @@
       showConfirmButton: false,
     })
 </script>
+@component('components.sidenav_backend')
+@endcomponent
 </head>
 <body>
     <div class="container mt-2">
@@ -93,7 +95,7 @@
                         <td><img src="{{  asset('storage/'.$images->path) }}" alt="" width="300" height="200"></td>
                         <td>storage/app/public/{{ $images->path }}</td>
                         <td>{{$images->n_cate}}</td>
-                        <td>{{$images->w_project}}</td>
+                        <td>{{$images->name}}</td>
                         <td>
                             <form id="delete-form-{{ $images->id }}" action="{{ route('backend.gallery.destroy', $images->id) }}" method="post">
                                 <a href="{{ route('backend.gallery.edit', $images->id) }}" class="btn btn-warning"><span class="font-thai">แก้ไข</span></a>

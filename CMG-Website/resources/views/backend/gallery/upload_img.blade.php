@@ -65,10 +65,10 @@
                             <select class="form-select" id="subcategory" name="subcate">
                                 <option value="" selected disabled hidden>ยังไม่ได้เลือกหมวดหมู่ใดๆ</option>
                                 @foreach ($wexp as $wxp)
-                                    <option class="font-thai" value="{{$wxp->sc_id}}">{{$wxp->name}}</option>
+                                    <option class="font-thai" value="{{$wxp->sub_cate}}">{{$wxp->name}}</option>
                                 @endforeach
                               </select>
-                              @error('category')
+                              @error('subcate')
                               <div class="alert alert-danger">
                               <span class="font-thai">กรุณาเลือกหมวดหมู่รองก่อน!</span>
                               </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\carousel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 
 class BackN extends Controller
 {
@@ -29,15 +30,20 @@ class BackN extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg',
+            'image' => 'required|image|mimes:jpeg,png,jpg,webp',
         ]);
 
-        $request->file('image')->storeAs('public/carousel', $request->file('image')->getClientOriginalName());
+        $image = $request->file('image');
+        $imageName = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME).'.webp';
+        $path = $image->storeAs('public/carousel', $imageName);
+
+        $img = Image::make(storage_path('app/'.$path))->encode('webp');
+        Storage::put($path, (string) $img);
 
         $lastsq = carousel::getLatest();
 
         $slide = new carousel;
-        $slide->path_img = 'carousel/'.$request->file('image')->getClientOriginalName();
+        $slide->path_img = 'carousel/'.$imageName;
         $slide->sq_order = $lastsq->sq_order + 1;
         $slide->save();
 
@@ -51,7 +57,7 @@ class BackN extends Controller
 
     public function update(Request $request, $id)
     {
-        $request->validate(['image' => 'required|image|mimes:jpeg,png,jpg']);
+        $request->validate(['image' => 'required|image|mimes:jpeg,png,jpg,webp']);
 
         $slide = carousel::find($id);
         if (Storage::exists('public/' . $slide->path_img))

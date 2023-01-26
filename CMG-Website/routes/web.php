@@ -43,7 +43,8 @@ Route::get('/portfolio', fn() => view('portfolio',
 //Routing ตัวนี้มีการส่งค่าพารามิเตอร์ด้วย โดยใช้ Models
 Route::get('/safety', function () {
     $mh_records = App\Models\mh_record::getAllRecords();
-    return view('safety', ['mh_records' => $mh_records]);
+    $s_img = App\Models\gallerymodeler::all();
+    return view('safety', ['mh_records' => $mh_records, 's_img' => $s_img]);
 })->name('safety');
 Route::get('/resources', function () {
     $employee = App\Models\EmployEE::getAllRecords();
@@ -85,4 +86,5 @@ Route::get('/resources', function () {
 
 Auth::routes();
 
+Route::get('/welcome', fn()=> view('welcome'));
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

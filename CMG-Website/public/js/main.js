@@ -82,6 +82,7 @@ function addFadeOUT(){
         });
   }
     $(document).ready(function() {
+        $('img').Lazy();
         $(window).scroll(function() {
           ScrollToTop();
           var scrollTop = window.pageYOffset || document.documentElement.scrollTop;

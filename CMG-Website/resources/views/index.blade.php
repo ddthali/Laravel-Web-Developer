@@ -50,7 +50,7 @@
                 $i++;
              @endphp
             <div @class(['carousel-item','active'=>$i==1]) data-bs-interval="10000">
-              <img src="{{  asset('storage/'.$carousel->path_img) }}" class="img-fluid" alt="..." style="">
+              <img data-src="{{  asset('storage/'.$carousel->path_img) }}" src="" class="img-fluid" alt="..." style="">
             </div>
             @endforeach
           </div>
@@ -75,10 +75,10 @@
                     <div class="flip-box">
                       <div class="flip-box-inner">
                         <div class="flip-box-front">
-                          <img src="engineer.png" alt="CMGENGINEERING" style="width:64px;height:64px">
+                          <img data-src="engineer.png" src="" alt="CMGENGINEERING" style="width:64px;height:64px">
                         </div>
                         <div class="flip-box-back">
-                          <img class="imgback" src="engineer.png" alt="engineer" style="width:64px;height:64px" >
+                          <img class="imgback" data-src="engineer.png" src="" alt="engineer" style="width:64px;height:64px" >
                         </div>
                       </div>
                     </div>
@@ -86,10 +86,10 @@
                       <hr>
                       <div class="row">
                         <div class="col-6">
-                          <img class="img-fluid img-view cv-anim" src="../storage/Works/600629.jpg">
+                          <img class="img-fluid img-view cv-anim" data-src="../storage/Works/600629.jpg" src="">
                         </div>
                         <div class="col-6">
-                          <img class="img-fluid img-view cv-anim" src="../storage/Works/600658.jpg">
+                          <img class="img-fluid img-view cv-anim" data-src="../storage/Works/600658.jpg" src="">
                         </div>
                         <div class="col">
                         <br>
@@ -111,7 +111,8 @@
               </div>
             </div>
           </div>
-
+    @component('components.full-screen-image')
+    @endcomponent
     @component('components.footer')
     @endcomponent
     @component('components.to-top')

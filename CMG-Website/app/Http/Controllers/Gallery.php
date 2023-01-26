@@ -8,15 +8,16 @@ use App\Models\portfolio;
 use App\Models\subcate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 
 class Gallery extends Controller
 {
     //Create
     public function index()
     {
-        $gallery = GalleryModeler::select('img_gallery.id','img_gallery.path','img_gallery.img_cate','img_category.n_cate','img_gallery.sub_cate','work_exp.w_project')
+        $gallery = GalleryModeler::select('img_gallery.id','img_gallery.path','img_gallery.img_cate','img_category.n_cate','img_gallery.sub_cate','s_category.name')
         ->join('img_category', 'img_category.id', '=', 'img_gallery.img_cate')
-        ->join('work_exp', 'work_exp.w_id', '=', 'img_gallery.sub_cate')
+        ->join('s_category', 's_category.sub_cate', '=', 'img_gallery.sub_cate')
         ->get();
         return view('backend.gallery.gallery', ['gallery'=>$gallery]);
     }
@@ -36,12 +37,18 @@ class Gallery extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg',
         ]);
         $cate = category::find($request->category);
-        $request->file('image')->storeAs('public/'.$cate->n_cate, $request->file('image')->getClientOriginalName());
+
+        $image = $request->file('image');
+        $imageName = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME).'.webp';
+        $path = $image->storeAs('public/'.$cate->n_cate, $imageName);
+
+        $img = Image::make(storage_path('app/'.$path))->encode('webp');
+        Storage::put($path, (string) $img);
 
         $slide = new gallerymodeler;
+        $slide->path = $cate->n_cate.'/'.$imageName;
         $slide->img_cate = $request->category;
         $slide->sub_cate = $request->subcate;
-        $slide->path = $cate->n_cate.'/'.$request->file('image')->getClientOriginalName();
         $slide->save();
 
         return redirect()->route('backend.gallery.index')->with('success', 'เพิ่มรูปภาพในหมวดหมู่ '.$cate->n_cate.' สำเร็จ!');

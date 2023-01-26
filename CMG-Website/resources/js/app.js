@@ -13,7 +13,49 @@ import { createApp } from 'vue';
  * to use in your application's views. An example is included for you.
  */
 
-const app = createApp({});
+const app = createApp({
+    delimiters: ['[[', ']]'],
+    data() {
+        return {
+          computer: '',
+          onLine: 'on-switch.png',
+          offLine: 'off-switch.png',
+          connection: null,
+          mask: 'card opacity-25 shadow-lg rounded-4 static mt-4',
+          unmask: 'card shadow-lg rounded-4 static mt-4',
+          nowon: '',
+          all: '',
+          cols: 1
+        }
+      },
+      methods:{
+        doSend(){
+          this.connection.send("getResponse");
+        }
+      },
+      created(){
+        console.log('%c[Websocket Handshake] : Connecting to WebSocker Server..',"color: #009BFF;")
+        this.connection = new WebSocket("ws://workshop2022.ddns.net:8089");
+
+        this.connection.onopen = (event)=>{
+          console.log("%c[WebSocket Handshake] : Successfully connected to WebSocker Server !", "color: lime; background-color: darkgreen;");
+          // setInterval(this.doSend,5000);
+          this.doSend();
+          setInterval(this.doSend, 5000);
+        }
+        this.connection.onmessage = (e)=>{
+        let Numb = JSON.parse(e.data);
+        this.nowon = Numb.filter((Num)=>{ return Num.Status == "1"}).length;
+        this.all = Numb.length;
+        this.computer = Numb;
+
+        }
+
+        this.connection.onerror = (event) =>{
+          console.error("[WebSocket Handshake] : Can't Connect to WebSocker Server!");
+        }
+      }
+});
 
 import ExampleComponent from './components/ExampleComponent.vue';
 app.component('example-component', ExampleComponent);
@@ -42,5 +84,9 @@ import '../sass/app.scss';
 import 'boxicons';
 
 import AOS from 'aos';
+
+import 'jquery-lazy';
+
+import '@popperjs/core';
 
 app.mount('#app');

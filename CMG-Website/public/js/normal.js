@@ -172,6 +172,7 @@ function ScrollToTop(){
 }
 
 $(document).ready(()=>{
+  $('img').Lazy();
   $(window).scroll(()=>{
     if(buttonToTop!=null){
         ScrollToTop();

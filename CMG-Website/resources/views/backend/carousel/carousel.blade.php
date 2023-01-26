@@ -51,6 +51,8 @@ const Failed = Swal.mixin({
 })
 const FixedData = [];
 </script>
+@component('components.sidenav_backend')
+@endcomponent
 </head>
 <body>
     <div class="container mt-2">

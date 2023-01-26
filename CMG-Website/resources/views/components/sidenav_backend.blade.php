@@ -1,45 +1,70 @@
-<div class="d-flex flex-column flex-shrink-0 bg-light" style="width: 4.5rem;">
-    <a href="/" class="d-block p-3 link-dark text-decoration-none" title="Icon-only" data-bs-toggle="tooltip" data-bs-placement="right">
-      <svg class="bi pe-none" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-      <span class="visually-hidden">Icon-only</span>
-    </a>
-    <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
-      <li class="nav-item">
-        <a href="#" class="nav-link active py-3 border-bottom rounded-0" aria-current="page" title="Home" data-bs-toggle="tooltip" data-bs-placement="right">
-          <svg class="bi pe-none" width="24" height="24" role="img" aria-label="Home"><use xlink:href="#home"/></svg>
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link py-3 border-bottom rounded-0" title="Dashboard" data-bs-toggle="tooltip" data-bs-placement="right">
-          <svg class="bi pe-none" width="24" height="24" role="img" aria-label="Dashboard"><use xlink:href="#speedometer2"/></svg>
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link py-3 border-bottom rounded-0" title="Orders" data-bs-toggle="tooltip" data-bs-placement="right">
-          <svg class="bi pe-none" width="24" height="24" role="img" aria-label="Orders"><use xlink:href="#table"/></svg>
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link py-3 border-bottom rounded-0" title="Products" data-bs-toggle="tooltip" data-bs-placement="right">
-          <svg class="bi pe-none" width="24" height="24" role="img" aria-label="Products"><use xlink:href="#grid"/></svg>
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link py-3 border-bottom rounded-0" title="Customers" data-bs-toggle="tooltip" data-bs-placement="right">
-          <svg class="bi pe-none" width="24" height="24" role="img" aria-label="Customers"><use xlink:href="#people-circle"/></svg>
-        </a>
-      </li>
-    </ul>
-    <div class="dropdown border-top">
-      <a href="#" class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-        <img src="https://github.com/mdo.png" alt="mdo" width="24" height="24" class="rounded-circle">
-      </a>
-      <ul class="dropdown-menu text-small shadow">
-        <li><a class="dropdown-item" href="#">New project...</a></li>
-        <li><a class="dropdown-item" href="#">Settings</a></li>
-        <li><a class="dropdown-item" href="#">Profile</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Sign out</a></li>
-      </ul>
-    </div>
+<a class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><box-icon name='menu' color='white'></box-icon></a>
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header">
+
   </div>
+  <div class="offcanvas-body">
+<!-- Start Body -->
+    <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <span class="fs-4">Backend</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+    <li class="nav-item">
+        <a data-toggle="tooltip" data-placement="right" title="รูปภาพสไลด์ในหน้าแรก" href="{{ request()->routeIs('backend.carousel.index') ? '#' : route('backend.carousel.index') }}" class="nav-link {{ request()->routeIs('backend.carousel.index') ? 'active' : 'link-dark'}}" aria-current="page">
+        Carousel
+        </a>
+    </li>
+    <li>
+        <a data-toggle="tooltip" data-placement="right" title="หมวดหมู่ทั้งหมด" href="{{ request()->routeIs('backend.category.index') ? '#' : route('backend.category.index') }}" class="nav-link {{ request()->routeIs('backend.category.index') ? 'active' : 'link-dark'}}" aria-current="page">
+        Category
+        </a>
+    </li>
+    <li>
+        <a data-toggle="tooltip" data-placement="right" title="ตำแหน่งงานทั้งหมด" href="{{ request()->routeIs('backend.employee.index') ? '#' : route('backend.employee.index') }}" class="nav-link {{ request()->routeIs('backend.employee.index') ? 'active' : 'link-dark'}}" aria-current="page">
+            Employee
+        </a>
+    </li>
+    <li>
+        <a data-toggle="tooltip" data-placement="right" title="รูปภาพทั้งหมดในแกลเลอรี่" href="{{ request()->routeIs('backend.gallery.index') ? '#' : route('backend.gallery.index') }}" class="nav-link {{ request()->routeIs('backend.gallery.index') ? 'active' : 'link-dark'}}" aria-current="page">
+            Gallery
+        </a>
+    </li>
+    <li>
+        <a data-toggle="tooltip" data-placement="right" title="รวมสถิติ Manhour" href="{{ request()->routeIs('backend.manhours.index') ? '#' : route('backend.manhours.index') }}" class="nav-link {{ request()->routeIs('backend.manhours.index') ? 'active' : 'link-dark'}}" aria-current="page">
+            Manhours
+        </a>
+    </li>
+        <li>
+        <a data-toggle="tooltip" data-placement="right" title="หมวดหมู่รองทั้งหมด" href="{{ request()->routeIs('backend.subcategory.index') ? '#' : route('backend.subcategory.index') }}" class="nav-link {{ request()->routeIs('backend.subcategory.index') ? 'active' : 'link-dark'}}" aria-current="page">
+            Subcategory
+        </a>
+    </li>
+        <li>
+        <a data-toggle="tooltip" data-placement="right" title="อุปกรณ์ทั้งหมด" href="{{ request()->routeIs('backend.supply.index') ? '#' : route('backend.supply.index') }}" class="nav-link {{ request()->routeIs('backend.supply.index') ? 'active' : 'link-dark'}}" aria-current="page">
+            Supply
+        </a>
+    </li>
+        <li>
+        <a data-toggle="tooltip" data-placement="right" title="บริษัทผู้จัดจำหน่ายทั้งหมด" href="{{ request()->routeIs('backend.vendor.index') ? '#' : route('backend.vendor.index') }}" class="nav-link {{ request()->routeIs('backend.vendor.index') ? 'active' : 'link-dark'}}" aria-current="page">
+            Vendor
+        </a>
+    </li>
+    </ul>
+    <hr>
+    <a role="button" class="btn btn-danger" href="{{ url('/logout') }}">Logout</a>
+<!-- end body -->
+  </div>
+</div>
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+<style>
+ul li:hover {
+border-radius: 6px;
+background-color: rgba(141, 141, 141, 0.5);
+}
+</style>
