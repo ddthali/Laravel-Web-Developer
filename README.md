@@ -1,2 +1,4 @@
 # Laravel-Web-Developer
- This is my 1st website project with laravel framework
+My first website project with laravel framework<br />
+**This website still in alpha version**<br />
+**Contributor : [Sippapat Kiatprasert](https://github.com/Gmikzx)**
