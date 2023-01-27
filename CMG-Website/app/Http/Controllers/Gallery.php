@@ -73,10 +73,17 @@ class Gallery extends Controller
 
         }
         $cate = category::find($request->category);
-        $request->file('image')->storeAs('public/'.$cate->n_cate, $request->file('image')->getClientOriginalName());
+
+        $image = $request->file('image');
+        $imageName = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME).'.webp';
+        $path = $image->storeAs('public/'.$cate->n_cate, $imageName);
+
+        $img = Image::make(storage_path('app/'.$path))->encode('webp');
+        Storage::put($path, (string) $img);
+
         $slide->img_cate = $request->category;
         $slide->sub_cate = $request->subcate;
-        $slide->path = $cate->n_cate.'/'.$request->file('image')->getClientOriginalName();
+        $slide->path = $cate->n_cate.'/'.$imageName;
         $slide->save();
 
         return redirect()->route('backend.gallery.index')->with('success', 'อัพเดทรูป id ที่ '.$id.' สำเร็จ!');

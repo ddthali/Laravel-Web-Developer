@@ -47,7 +47,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label class="font-thai">สไลด์ที่ {{ $lastest->sq_order+1 }}</label>
+                            <label class="font-thai">สไลด์ที่ {{ is_null($lastest) ? '1' : $lastest->sq_order+1 }}</label>
                         </div>
                         <div class="form-group">
                             <input type="file" name="image" id="image">

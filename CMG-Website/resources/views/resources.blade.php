@@ -185,22 +185,32 @@
                                     </div>
                                 </div>
                                 <br>
-                                <img src="storage/officemap.jpg" class="img-fluid mb-5 img-view cv-anim" style="border-radius: 6px;">
+                                <img src="storage/officemap.jpg" class="img-fluid mb-3 img-view cv-anim" style="border-radius: 6px;">
                                 <div class="ribbwork1" align="center" style="height: 68px;">
                                     <div class="ribbwork2" style="font-size: 18px; height: 68px; line-height: 32px;">
                                     CMG's Head Office : <br>Location
                                     </div>
                                 </div>
                                 <br>
-                                        <iframe class="mb-5 map-responsive" style="border-radius: 6px;"
-                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84340.42838751564!2d101.20118685232039!3d12.68862359196518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3102fb91ce3f5501%3A0x30fb215432cf5b81!2sCMG%20Engineering%20%26%20Construction%20Co.%2CLtd.!5e0!3m2!1sen!2sth!4v1671783962501!5m2!1sen!2sth"
-                                            width="600" height="450" style="border:0;" allowfullscreen=""
-                                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                            <div class="ribbwork1" align="center">
-                                             <div class="ribbwork2">
-                                             CMG Workshop
-                                             </div>
+                                        <iframe class="mb-3 map-responsive" style="border-radius: 6px;"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84340.42838751564!2d101.20118685232039!3d12.68862359196518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3102fb91ce3f5501%3A0x30fb215432cf5b81!2sCMG%20Engineering%20%26%20Construction%20Co.%2CLtd.!5e0!3m2!1sen!2sth!4v1671783962501!5m2!1sen!2sth"
+                                        width="600" height="450" style="border:0;" allowfullscreen=""
+                                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        <div class="Content-light text-center mb-3" style="border-radius: 6px; padding: 12px;">
+                                            <span class="topic-b">CMG's Head Office Address</span><br>
+                                            &nbsp;4/281 MOO.3 TAMBOL NERNPRA,AMPHUR MUANG ,RAYONG PROVINCE 21000<br>
+                                            <span class="topic-b">Hours</span><br>
+                                            <span class="topic-b">Monday - Friday :</span>&nbsp;8:00 - 17:00<br>
+                                            <span class="topic-b">Saturday :</span>&nbsp;8:00 - 17:00<br>
+                                            <span class="topic-b">Sunday :</span>&nbsp;Close<br>
+                                        </div>
+
+                                        <div class="ribbwork1" align="center">
+                                            <div class="ribbwork2">
+                                            CMG Workshop
                                             </div>
+                                        </div>
+
                                             <br>
                                         <img src="storage/wsmap.png" class="img-fluid mb-5 img-view cv-anim" style="border-radius: 6px;">
                                         <div class="ribbwork1" align="center" style="height: 68px;">
@@ -214,7 +224,7 @@
                                             width="600" height="450" style="border:0;" allowfullscreen=""
                                             loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                         <div class="Content-light text-center mb-1" style="border-radius: 6px; padding: 12px;">
-                                            <span class="topic-b">Address</span><br>
+                                            <span class="topic-b">CMG Workshop Address</span><br>
                                             &nbsp;M5QG+75 Rayong, Mueang Rayong District, Rayong<br>
                                             <span class="topic-b">Hours</span><br>
                                             <span class="topic-b">Monday - Friday :</span>&nbsp;8:00 - 17:00<br>

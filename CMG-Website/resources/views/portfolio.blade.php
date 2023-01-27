@@ -94,7 +94,8 @@
                                             $scale = preg_split('/x/',$exp->logo_scale);
                                         @endphp
                                         <div class="left-content">
-                                            <img class="d-block img-fluid mx-auto image-anim" src="{{ $exp->w_logo }}" width="{{$scale[0]}}" height="{{$scale[1]}}" alt=""></div>
+                                            <img class="d-block img-fluid mx-auto image-anim" src="{{ $exp->w_logo }}" width="{{$scale[0]}}" height="{{$scale[1]}}" alt="">
+                                        </div>
                                         <div class="right-content">
                                         <p> <span class="topic-b">Project Name :</span>  {{ $exp->w_project }}<br>
                                             <span class="topic-b">Client :</span>  {{ $exp->w_client }}<br>
@@ -124,6 +125,20 @@
                                 </div>
                                 <br>
                             @endforeach
+
+                              <div class="col text-start">
+                                <div class="box-safe">
+                                  <div class="left">
+                                  </div>
+                                  <div class="right">
+                                    <div style="display: flex; align-items: center; font-family: Mitr;">
+                                      &nbsp;&nbsp;ผลงานอื่นๆ
+                                    </div>
+                                  </div>
+                                  <div class="right2">
+                                  </div>
+                                </div>
+                              </div>
                     </div>
                 </div>
             </div>

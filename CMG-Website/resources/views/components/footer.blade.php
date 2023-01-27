@@ -80,7 +80,7 @@
                 style="width: 70px; background-color: #7c4dff; height: 2px"
                 />
             <p><i class="fas fa-building mr-3"></i> <b>OFFICE :</b> 4/281 MOO.3 TAMBOL NERNPRA,AMPHUR MUANG ,RAYONG PROVINCE 21000</p>
-            <p><i class="fas fa-envelope mr-3"></i> <b>EMAIL :</b> noppadon.ppe@gmail.com</p>
+            <p><i class="fas fa-envelope mr-3"></i> <b>EMAIL :</b> info.pr.cmg@gmail.com</p>
             <p><i class="fas fa-phone mr-3"></i> <b>TEL :</b> 081-9967311,085-991963</p>
             <p class="mb-4"><i class="fas fa-print mr-3"></i> <b>FAX :</b> 033-680588</p>
           </div>

@@ -44,7 +44,7 @@ class BackN extends Controller
 
         $slide = new carousel;
         $slide->path_img = 'carousel/'.$imageName;
-        $slide->sq_order = $lastsq->sq_order + 1;
+        $slide->sq_order = is_null($lastsq) ? 1 : $lastsq->sq_order + 1;
         $slide->save();
 
         return redirect()->route('backend.carousel.index')->with('success', 'เพิ่มสไลด์ในหน้าแรกสำเร็จ!');
@@ -64,8 +64,14 @@ class BackN extends Controller
         {
             Storage::delete('public/' . $slide->path_img);
         }
-        $request->file('image')->storeAs('public/carousel', $request->file('image')->getClientOriginalName());
-        $slide->path_img = 'carousel/'.$request->file('image')->getClientOriginalName();
+        $image = $request->file('image');
+        $imageName = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME).'.webp';
+        $path = $image->storeAs('public/carousel', $imageName);
+
+        $img = Image::make(storage_path('app/'.$path))->encode('webp');
+        Storage::put($path, (string) $img);
+
+        $slide->path_img = 'carousel/'.$imageName;
         $slide->save();
 
         return redirect()->route('backend.carousel.index')->with('success', 'อัพเดทสไลด์ที่ '.$slide->sq_order.' สำเร็จ!');
